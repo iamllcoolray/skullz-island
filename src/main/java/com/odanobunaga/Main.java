@@ -25,7 +25,7 @@ public class Main {
         Game.init(args);
 
         // set the icon for the game (this has to be done after initialization because the ScreenManager will not be present otherwise)
-        Game.window().setIcon(Resources.images().get("sprites/ball.png"));
+        Game.window().setIcon(Resources.images().get("sprites/player-idle.png"));
         Game.graphics().setBaseRenderScale(2f);
 
         // load data from the utiLITI game file
