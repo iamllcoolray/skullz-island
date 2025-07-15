@@ -18,7 +18,7 @@ public class Main {
         Game.info().setName("Skullz Island");
         Game.info().setSubTitle("");
         Game.info().setVersion("v0.0.1");
-        Game.info().setWebsite("link to game");
+        Game.info().setWebsite("https://github.com/iamllcoolray/skullz-island");
         Game.info().setDescription("A 2D Game made in the LITIENGINE");
 
         // init the game infrastructure
