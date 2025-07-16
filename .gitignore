@@ -6,6 +6,7 @@
 build/
 crash.txt
 game.log
+game.log.lck
 
 # User-specific stuff
 .idea/**/workspace.xml
