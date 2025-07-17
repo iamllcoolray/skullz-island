@@ -16,7 +16,7 @@ public class EnemyController implements IBehaviorController {
     public EnemyController(Creature enemy) {
         this.enemy = enemy;
         this.distanceFromTarget = 0;
-        this.CHASE_RADIUS = 250;
+        this.CHASE_RADIUS = 100000;
         this.navigator = new EntityNavigator(this.enemy, new AStarPathFinder(Game.world().environment().getMap()));
     }
 

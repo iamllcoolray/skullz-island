@@ -1,10 +1,9 @@
 package com.odanobunaga.logic;
 
+import com.odanobunaga.entities.EnemySpawner;
 import com.odanobunaga.entities.Player;
-import com.odanobunaga.entities.Skull;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
-import de.gurkenlabs.litiengine.environment.CreatureMapObjectLoader;
 import de.gurkenlabs.litiengine.graphics.Camera;
 import de.gurkenlabs.litiengine.graphics.LocationLockCamera;
 
@@ -26,7 +25,7 @@ public class GameManager {
             }
         });
 
-        CreatureMapObjectLoader.registerCustomCreatureType(Skull.class);
+        Game.loop().attach(new EnemySpawner());
     }
 
 }

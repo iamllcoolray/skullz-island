@@ -52,19 +52,6 @@
       <property name="renderType" value="NORMAL"/>
      </properties>
     </object>
-    <object id="6" type="CREATURE" x="1632" y="768" width="96" height="96">
-     <properties>
-      <property name="collision" type="bool" value="true"/>
-      <property name="collisionAlign" value="CENTER"/>
-      <property name="collisionType" value="DYNAMIC"/>
-      <property name="collisionValign" value="MIDDLE"/>
-      <property name="collisionboxHeight" value="96.0"/>
-      <property name="renderType" value="NORMAL"/>
-      <property name="spawnDirection" value="UNDEFINED"/>
-      <property name="spritesheetName" value="skull"/>
-      <property name="turnOnMove" type="bool" value="false"/>
-     </properties>
-    </object>
    </objectgroup>
   </map>
  </maps>
