@@ -40,8 +40,6 @@ public class EnemyController implements IBehaviorController {
 
         this.distanceFromTarget = (int) this.getEntity().getCenter().distance(Player.instance().getCenter());
 
-        System.out.println(distanceFromTarget);
-
         if (this.distanceFromTarget < this.CHASE_RADIUS) {
             this.chaseTarget();
         } else {
