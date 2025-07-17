@@ -1,6 +1,5 @@
 package com.odanobunaga.abilities;
 
-import com.odanobunaga.entities.Ball;
 import de.gurkenlabs.litiengine.abilities.Ability;
 import de.gurkenlabs.litiengine.abilities.AbilityExecution;
 import de.gurkenlabs.litiengine.abilities.AbilityInfo;
