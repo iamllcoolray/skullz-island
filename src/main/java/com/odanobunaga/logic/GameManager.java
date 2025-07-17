@@ -1,7 +1,7 @@
 package com.odanobunaga.logic;
 
 import com.odanobunaga.entities.Player;
-import com.odanobunaga.entities.Skulls;
+import com.odanobunaga.entities.Skull;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Spawnpoint;
 import de.gurkenlabs.litiengine.environment.CreatureMapObjectLoader;
@@ -26,7 +26,7 @@ public class GameManager {
             }
         });
 
-        CreatureMapObjectLoader.registerCustomCreatureType(Skulls.class);
+        CreatureMapObjectLoader.registerCustomCreatureType(Skull.class);
     }
 
 }

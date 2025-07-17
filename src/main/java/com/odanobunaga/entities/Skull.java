@@ -8,8 +8,8 @@ import de.gurkenlabs.litiengine.entities.MovementInfo;
 @EntityInfo(width = 96, height = 96)
 @MovementInfo(velocity = 120)
 @CollisionInfo(collision = false)
-public class Skulls extends Creature {
-    public Skulls(){
+public class Skull extends Creature {
+    public Skull(){
         super("skull");
 
         this.addController(new EnemyController(this));
