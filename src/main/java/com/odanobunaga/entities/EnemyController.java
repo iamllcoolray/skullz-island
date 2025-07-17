@@ -16,7 +16,7 @@ public class EnemyController implements IBehaviorController {
     public EnemyController(Creature enemy) {
         this.enemy = enemy;
         this.distanceFromTarget = 0;
-        this.CHASE_RADIUS = 100000;
+        this.CHASE_RADIUS = 500;
         this.navigator = new EntityNavigator(this.enemy, new AStarPathFinder(Game.world().environment().getMap()));
     }
 
@@ -27,9 +27,7 @@ public class EnemyController implements IBehaviorController {
     }
 
     private void chaseTarget(){
-        if (!this.navigator.isNavigating()) {
-            this.navigator.navigate(Player.instance().getCenter());
-        }
+        this.navigator.navigate(Player.instance().getCenter());
     }
 
     @Override
@@ -40,10 +38,12 @@ public class EnemyController implements IBehaviorController {
 
         this.distanceFromTarget = (int) this.getEntity().getCenter().distance(Player.instance().getCenter());
 
-        if (this.distanceFromTarget < this.CHASE_RADIUS) {
-            this.chaseTarget();
-        } else {
-            this.navigator.stop();
-        }
+        this.chaseTarget();
+
+//        if (this.distanceFromTarget < this.CHASE_RADIUS) {
+//            this.chaseTarget();
+//        } else {
+//            this.navigator.stop();
+//        }
     }
 }

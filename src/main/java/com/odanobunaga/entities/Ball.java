@@ -55,7 +55,6 @@ public class Ball extends Prop implements IUpdateable {
         // Check for collisions with any enemy
         for (IEntity entity : Game.world().environment().getEntities()) {
             if (entity instanceof Skull && this.getBoundingBox().intersects(entity.getBoundingBox())) {
-                System.out.println("Ball hit enemy: " + entity.getName());
                 this.dispose(); // remove the ball
                 // Optional: Damage enemy or trigger effect
                 ((Skull) entity).dispose(); // You define this
