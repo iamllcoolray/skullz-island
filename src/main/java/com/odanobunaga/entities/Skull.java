@@ -16,7 +16,6 @@ import java.awt.*;
 public class Skull extends Creature {
     public Skull(){
         super("skull");
-
         this.addController(new EnemyController(this));
     }
 

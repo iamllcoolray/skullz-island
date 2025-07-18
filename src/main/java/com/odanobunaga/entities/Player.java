@@ -59,6 +59,19 @@ public class Player extends Creature implements IUpdateable {
         if(Input.mouse().isLeftButtonPressed()){
             throwAbility();
         }
+
+        // Check for collisions with any enemy
+        for (IEntity entity : Game.world().environment().getEntities()) {
+            if (entity instanceof Skull && this.getBoundingBox().intersects(entity.getBoundingBox())) {
+                this.respawn();
+                ((Skull) entity).dispose();
+                break;
+            }
+        }
+    }
+
+    private void respawn() {
+        Game.world().environment().getSpawnpoint("enter").spawn(Player.instance());
     }
 
     @Override

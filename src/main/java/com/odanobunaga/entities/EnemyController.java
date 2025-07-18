@@ -1,9 +1,9 @@
 package com.odanobunaga.entities;
 
+import com.odanobunaga.logic.NoCollisionAStarPathFinder;
 import de.gurkenlabs.litiengine.Game;
 import de.gurkenlabs.litiengine.entities.Creature;
 import de.gurkenlabs.litiengine.entities.IEntity;
-import de.gurkenlabs.litiengine.entities.behavior.AStarPathFinder;
 import de.gurkenlabs.litiengine.entities.behavior.EntityNavigator;
 import de.gurkenlabs.litiengine.entities.behavior.IBehaviorController;
 
@@ -17,7 +17,7 @@ public class EnemyController implements IBehaviorController {
         this.enemy = enemy;
         this.distanceFromTarget = 0;
         this.CHASE_RADIUS = 500;
-        this.navigator = new EntityNavigator(this.enemy, new AStarPathFinder(Game.world().environment().getMap()));
+        this.navigator = new EntityNavigator(this.enemy, new NoCollisionAStarPathFinder(Game.world().environment().getMap()));
     }
 
 
